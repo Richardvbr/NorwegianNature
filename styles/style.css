@@ -166,6 +166,11 @@
           animation-delay: 1.05s;
 }
 
+#grid-container .card:nth-child(8) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
 #grid-container .card img {
   display: block;
   width: 100%;
