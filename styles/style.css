@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+#nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+  position: relative;
+  text-align: center;
+}
+
+#nav-container .logo img {
+  max-width: 50px;
+}
+
+.item3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: item3;
+}
+
+.item4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: item4;
+}
+
+.item8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: item8;
+}
+
+.item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: item2;
+}
+
+.item5 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: item5;
+}
+
+.item7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: item7;
+}
+
+.item1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: item1;
+}
+
+.item6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: item6;
+}
+
+#grid-container {
+  margin: 1rem 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1.25rem;
+      grid-template-areas: "item3 item4 item4 item8 item2" "item3 item5 item7 item1 item1" "item3 item5 item6 item6 item6";
+  grid-auto-rows: 260px;
+}
+
+@-webkit-keyframes cardAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes cardAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#grid-container .card {
+  background-color: #333;
+  -webkit-animation: cardAnim 750ms ease-out;
+          animation: cardAnim 750ms ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+#grid-container .card:nth-child(1) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+#grid-container .card:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#grid-container .card:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+#grid-container .card:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#grid-container .card:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+#grid-container .card:nth-child(6) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+#grid-container .card:nth-child(7) {
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+
+#grid-container .card:nth-child(8) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+#grid-container .card:nth-child(9) {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
+}
+
+#grid-container .card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (8)[auto];
+        grid-template-rows: repeat(auto, 8);
+        grid-template-areas: "item3 item4" "item8 item2" "item5 item7" "item1 item6";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #grid-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (8)[auto];
+        grid-template-rows: repeat(auto, 8);
+        grid-template-areas: "item3" "item4" "item8" "item2" "item5" "item7" "item1" "item6";
+  }
+}
+/*# sourceMappingURL=style.css.map */
