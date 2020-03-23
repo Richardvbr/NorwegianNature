@@ -68,7 +68,7 @@ $font: 'Montserrat', sans-serif;
     animation: cardAnim 750ms ease-out;
     animation-fill-mode: backwards;
 
-    @for $i from 1 to 8 {
+    @for $i from 1 to 9 {
       &:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
     }
 
