@@ -68,7 +68,7 @@ $font: 'Montserrat', sans-serif;
     animation: cardAnim 750ms ease-out;
     animation-fill-mode: backwards;
 
-    @for $i from 1 to 10 {
+    @for $i from 1 to 8 {
       &:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
     }
 
@@ -91,6 +91,7 @@ $font: 'Montserrat', sans-serif;
   #grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto, 8);
+    margin: 1rem 2rem;
     grid-template-areas:
     "item3 item4"
     "item8 item2"
@@ -103,6 +104,7 @@ $font: 'Montserrat', sans-serif;
   #grid-container {
     grid-template-columns: 100%;
     grid-template-rows: repeat(auto, 8);
+    margin: 1rem 2rem;
     grid-template-areas:
     "item3"
     "item4"

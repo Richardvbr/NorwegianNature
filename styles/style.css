@@ -166,16 +166,6 @@
           animation-delay: 1.05s;
 }
 
-#grid-container .card:nth-child(8) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-#grid-container .card:nth-child(9) {
-  -webkit-animation-delay: 1.35s;
-          animation-delay: 1.35s;
-}
-
 #grid-container .card img {
   display: block;
   width: 100%;
@@ -196,6 +186,7 @@
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (8)[auto];
         grid-template-rows: repeat(auto, 8);
+    margin: 1rem 2rem;
         grid-template-areas: "item3 item4" "item8 item2" "item5 item7" "item1 item6";
   }
 }
@@ -206,6 +197,7 @@
         grid-template-columns: 100%;
     -ms-grid-rows: (8)[auto];
         grid-template-rows: repeat(auto, 8);
+    margin: 1rem 2rem;
         grid-template-areas: "item3" "item4" "item8" "item2" "item5" "item7" "item1" "item6";
   }
 }
