@@ -196,7 +196,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   #grid-container {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
