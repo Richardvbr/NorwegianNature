@@ -177,6 +177,15 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+#grid-container .card img:hover {
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
 }
 
 @media screen and (max-width: 1200px) {
